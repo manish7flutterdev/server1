@@ -25,7 +25,7 @@ router.route("/id/:_id").get((req,res)=>{
 
 
 router.route("/register").post((req,res)=>{
-    Users.findOne({Email:req.body.Email},(err,result)=>{
+    Users.findOne({title:req.body.title},(err,result)=>{
         if(err) return res.status(500).json({msg:err})
         if(result===null)
         {
